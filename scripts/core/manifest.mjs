@@ -303,7 +303,7 @@ export function createExampleManifest() {
 export function exportManifestSchema() {
   return {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: `https://example.invalid/${MODULE_ID}/manifest.schema.json`,
+    $id: `https://github.com/Runyth/foundry-declarative-user-provisioning/blob/master/schema/manifest.schema.json`,
     title: "Declarative User Provisioning Manifest",
     type: "object",
     additionalProperties: false,
