@@ -25,7 +25,7 @@ async function walk(directory) {
 
 const moduleManifest = JSON.parse(await readFile(resolve(root, "module.json"), "utf8"));
 assert.equal(moduleManifest.id, "declarative-user-provisioning");
-assert.equal(moduleManifest.version, "1.0.2");
+assert.equal(moduleManifest.version, "1.0.3");
 assert.equal(moduleManifest.compatibility.minimum, "13");
 assert.equal(moduleManifest.compatibility.maximum, "13");
 pass("module identity and Foundry compatibility");

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3 — 2026-11-01
+
+### Fixed
+
+- Pointed the manifest `download` URL at the release's own `-mod` archive instead of the previous version's release path.
+
 ## 1.0.2 — 2026-10-31
 
 ### Fixed
