@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2 — 2026-10-31
+
+### Fixed
+
+- Replaced the placeholder schema identifier with the public repository URL.
+
 ## 1.0.1 — 2026-10-31
 
 ### Changed
