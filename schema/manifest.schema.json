@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/declarative-user-provisioning/manifest.schema.json",
+  "title": "Declarative User Provisioning Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "users"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "orphanPolicy": {
+      "enum": [
+        "preserve",
+        "disable"
+      ],
+      "default": "preserve"
+    },
+    "defaults": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "role": {
+          "enum": [
+            "NONE",
+            "PLAYER",
+            "TRUSTED",
+            "ASSISTANT",
+            "GAMEMASTER"
+          ],
+          "default": "PLAYER"
+        },
+        "permissions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "propertyNames": {
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          }
+        }
+      }
+    },
+    "users": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "name"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "pattern": "^[a-z0-9](?:[a-z0-9._-]{0,62}[a-z0-9])?$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "role": {
+            "enum": [
+              "NONE",
+              "PLAYER",
+              "TRUSTED",
+              "ASSISTANT",
+              "GAMEMASTER"
+            ]
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+          },
+          "avatar": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "permissions": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "propertyNames": {
+              "pattern": "^[A-Z][A-Z0-9_]*$"
+            }
+          },
+          "match": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,64}$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

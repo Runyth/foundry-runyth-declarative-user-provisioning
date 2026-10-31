@@ -1,0 +1,252 @@
+Declarative User Provisioning 1.0.0 — Automated Test Results
+Generated: 2026-08-04
+
+
+> declarative-user-provisioning@1.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: JSON and YAML examples validate to the same normalized manifest
+ok 1 - JSON and YAML examples validate to the same normalized manifest
+  ---
+  duration_ms: 16.627181
+  type: 'test'
+  ...
+# Subtest: canonical serializers are stable
+ok 2 - canonical serializers are stable
+  ---
+  duration_ms: 0.541564
+  type: 'test'
+  ...
+# Subtest: unknown fields are rejected
+ok 3 - unknown fields are rejected
+  ---
+  duration_ms: 0.280516
+  type: 'test'
+  ...
+# Subtest: password-like and secret fields are rejected
+ok 4 - password-like and secret fields are rejected
+  ---
+  duration_ms: 0.218844
+  type: 'test'
+  ...
+# Subtest: duplicate stable keys are rejected
+ok 5 - duplicate stable keys are rejected
+  ---
+  duration_ms: 0.185716
+  type: 'test'
+  ...
+# Subtest: case-insensitive duplicate desired names are rejected
+ok 6 - case-insensitive duplicate desired names are rejected
+  ---
+  duration_ms: 0.107539
+  type: 'test'
+  ...
+# Subtest: external and traversing avatar paths are rejected
+ok 7 - external and traversing avatar paths are rejected
+  ---
+  duration_ms: 0.332253
+  type: 'test'
+  ...
+# Subtest: runtime permission allowlist is enforced
+ok 8 - runtime permission allowlist is enforced
+  ---
+  duration_ms: 0.226936
+  type: 'test'
+  ...
+# Subtest: missing manifest user produces create action
+ok 9 - missing manifest user produces create action
+  ---
+  duration_ms: 1.90838
+  type: 'test'
+  ...
+# Subtest: managed user is matched by stable flag key and updated
+ok 10 - managed user is matched by stable flag key and updated
+  ---
+  duration_ms: 9.008912
+  type: 'test'
+  ...
+# Subtest: explicit exact-name match adopts an unmanaged user
+ok 11 - explicit exact-name match adopts an unmanaged user
+  ---
+  duration_ms: 0.319964
+  type: 'test'
+  ...
+# Subtest: unmanaged name collision blocks implicit adoption
+ok 12 - unmanaged name collision blocks implicit adoption
+  ---
+  duration_ms: 0.313224
+  type: 'test'
+  ...
+# Subtest: unresolved explicit match blocks creation
+ok 13 - unresolved explicit match blocks creation
+  ---
+  duration_ms: 0.470057
+  type: 'test'
+  ...
+# Subtest: disabled manifest user receives role NONE without deletion
+ok 14 - disabled manifest user receives role NONE without deletion
+  ---
+  duration_ms: 0.300485
+  type: 'test'
+  ...
+# Subtest: orphan preserve policy leaves absent managed users unchanged
+ok 15 - orphan preserve policy leaves absent managed users unchanged
+  ---
+  duration_ms: 0.210682
+  type: 'test'
+  ...
+# Subtest: orphan disable policy sets absent managed user to NONE
+ok 16 - orphan disable policy sets absent managed user to NONE
+  ---
+  duration_ms: 0.19577
+  type: 'test'
+  ...
+# Subtest: current user cannot be downgraded below ASSISTANT
+ok 17 - current user cannot be downgraded below ASSISTANT
+  ---
+  duration_ms: 0.484248
+  type: 'test'
+  ...
+# Subtest: plan cannot leave the world without a Gamemaster
+ok 18 - plan cannot leave the world without a Gamemaster
+  ---
+  duration_ms: 1.269683
+  type: 'test'
+  ...
+# Subtest: converged managed user is noop
+ok 19 - converged managed user is noop
+  ---
+  duration_ms: 0.230813
+  type: 'test'
+  ...
+# Subtest: reconciler creates first and updates second through Foundry batch APIs
+ok 20 - reconciler creates first and updates second through Foundry batch APIs
+  ---
+  duration_ms: 2.959569
+  type: 'test'
+  ...
+# Subtest: reconciler never invokes a delete API
+ok 21 - reconciler never invokes a delete API
+  ---
+  duration_ms: 0.288688
+  type: 'test'
+  ...
+# Subtest: non-Gamemaster reconciliation is rejected
+ok 22 - non-Gamemaster reconciliation is rejected
+  ---
+  duration_ms: 0.473753
+  type: 'test'
+  ...
+# Subtest: invalid plan is rejected
+ok 23 - invalid plan is rejected
+  ---
+  duration_ms: 0.253405
+  type: 'test'
+  ...
+# Subtest: relative module and data paths are accepted
+ok 24 - relative module and data paths are accepted
+  ---
+  duration_ms: 0.735841
+  type: 'test'
+  ...
+# Subtest: external URLs are rejected
+ok 25 - external URLs are rejected
+  ---
+  duration_ms: 1.138589
+  type: 'test'
+  ...
+# Subtest: path traversal is rejected
+ok 26 - path traversal is rejected
+  ---
+  duration_ms: 0.143643
+  type: 'test'
+  ...
+# Subtest: unsupported extensions are rejected
+ok 27 - unsupported extensions are rejected
+  ---
+  duration_ms: 0.161019
+  type: 'test'
+  ...
+# Subtest: English and German localization keys have exact parity
+ok 28 - English and German localization keys have exact parity
+  ---
+  duration_ms: 4.612711
+  type: 'test'
+  ...
+# Subtest: production source contains no deprecated module-owned ApplicationV1 classes
+ok 29 - production source contains no deprecated module-owned ApplicationV1 classes
+  ---
+  duration_ms: 4.679541
+  type: 'test'
+  ...
+# Subtest: runtime code exposes public API and supported User batch APIs
+ok 30 - runtime code exposes public API and supported User batch APIs
+  ---
+  duration_ms: 1.536989
+  type: 'test'
+  ...
+# Subtest: CSS selectors remain scoped to module-owned roots
+ok 31 - CSS selectors remain scoped to module-owned roots
+  ---
+  duration_ms: 3.563015
+  type: 'test'
+  ...
+# Subtest: strict YAML parser handles manifest mappings and sequence mappings
+ok 32 - strict YAML parser handles manifest mappings and sequence mappings
+  ---
+  duration_ms: 1.743175
+  type: 'test'
+  ...
+# Subtest: YAML comments do not affect quoted hash characters
+ok 33 - YAML comments do not affect quoted hash characters
+  ---
+  duration_ms: 1.103927
+  type: 'test'
+  ...
+# Subtest: YAML parser rejects tabs
+ok 34 - YAML parser rejects tabs
+  ---
+  duration_ms: 0.371401
+  type: 'test'
+  ...
+# Subtest: YAML parser rejects anchors and aliases
+ok 35 - YAML parser rejects anchors and aliases
+  ---
+  duration_ms: 0.131956
+  type: 'test'
+  ...
+# Subtest: YAML parser rejects duplicate keys
+ok 36 - YAML parser rejects duplicate keys
+  ---
+  duration_ms: 0.268508
+  type: 'test'
+  ...
+# Subtest: YAML serializer round-trips nested data
+ok 37 - YAML serializer round-trips nested data
+  ---
+  duration_ms: 0.510076
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 123.807129
+
+PASS module identity and Foundry compatibility
+PASS all manifest paths exist with matching case
+PASS JavaScript syntax
+PASS JSON syntax
+PASS English/German localization parity (93 keys)
+PASS ApplicationV2 and prohibited legacy pattern audit
+PASS template localization references
+PASS CSS isolation
+PASS CLI example validation
+PASS automated test suite
+
+10 quality gates passed.

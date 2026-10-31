@@ -1,0 +1,21 @@
+{
+  "name": "declarative-user-provisioning",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0 <27"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node tools/check.mjs",
+    "package": "node tools/package.mjs",
+    "release": "npm run check && npm run package",
+    "manifest": "node tools/user-manifest.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Runyth/foundry-declarative-user-provisioning.git"
+  },
+  "license": "AGPL-3.0-or-later"
+}

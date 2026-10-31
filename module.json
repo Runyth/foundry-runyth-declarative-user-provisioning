@@ -1,0 +1,41 @@
+{
+  "id": "declarative-user-provisioning",
+  "title": "Runyth Declarative User Provisioning",
+  "description": "Idempotently reconcile known Foundry VTT world users from version-controlled JSON or YAML manifests without storing passwords or deleting unmanaged users.",
+  "version": "1.0.1",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351",
+    "maximum": "13"
+  },
+  "authors": [
+    {
+      "name": "Runyth",
+      "url": "https://github.com/Runyth"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/declarative-user-provisioning.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "license": "LICENSE",
+  "readme": "README.md",
+  "url": "https://github.com/Runyth/foundry-declarative-user-provisioning",
+  "manifest": "https://github.com/Runyth/foundry-declarative-user-provisioning/releases/latest/download/module.json",
+  "download": "https://github.com/Runyth/foundry-declarative-user-provisioning/releases/download/v1.0.1/declarative-user-provisioning-v1.0.1-mod.zip",
+  "changelog": "CHANGELOG.md"
+}

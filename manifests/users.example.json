@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "orphanPolicy": "preserve",
+  "defaults": {
+    "enabled": true,
+    "role": "PLAYER"
+  },
+  "users": [
+    {
+      "key": "game-master",
+      "name": "Game Master",
+      "role": "GAMEMASTER",
+      "match": {
+        "name": "Gamemaster"
+      }
+    },
+    {
+      "key": "player-one",
+      "name": "Player One",
+      "role": "PLAYER",
+      "color": "#4f46e5"
+    },
+    {
+      "key": "player-two",
+      "name": "Player Two",
+      "enabled": false,
+      "role": "PLAYER"
+    }
+  ]
+}

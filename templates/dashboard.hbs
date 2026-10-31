@@ -1,0 +1,139 @@
+<section class="dup-dashboard-root" aria-busy="{{busy}}">
+  <header class="dup-dashboard__intro">
+    <div>
+      <h1>{{localize "DUP.App.Heading"}}</h1>
+      <p>{{localize "DUP.App.Intro"}}</p>
+    </div>
+    <div class="dup-dashboard__status" aria-live="polite">
+      {{#if busy}}<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> {{localize "DUP.Status.Working"}}{{else}}{{localize "DUP.Status.Ready"}}{{/if}}
+    </div>
+  </header>
+
+  <fieldset class="dup-card dup-settings" {{#if busy}}disabled{{/if}}>
+    <legend>{{localize "DUP.Section.Configuration"}}</legend>
+    <div class="dup-grid dup-grid--configuration">
+      <label class="dup-field dup-field--wide">
+        <span>{{localize "DUP.Fields.ManifestPath"}}</span>
+        <input type="text" name="manifestPath" value="{{settings.manifestPath}}" autocomplete="off" spellcheck="false" required>
+        <small>{{localize "DUP.Fields.ManifestPathHint"}}</small>
+      </label>
+      <label class="dup-field">
+        <span>{{localize "DUP.Fields.OrphanPolicy"}}</span>
+        <select name="orphanPolicy">
+          {{#each orphanPolicies}}
+            <option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+          {{/each}}
+        </select>
+      </label>
+      <label class="dup-check">
+        <input type="checkbox" name="enabled" {{#if settings.enabled}}checked{{/if}}>
+        <span><strong>{{localize "DUP.Fields.Enabled"}}</strong><small>{{localize "DUP.Fields.EnabledHint"}}</small></span>
+      </label>
+      <label class="dup-check">
+        <input type="checkbox" name="autoReconcile" {{#if settings.autoReconcile}}checked{{/if}}>
+        <span><strong>{{localize "DUP.Fields.AutoReconcile"}}</strong><small>{{localize "DUP.Fields.AutoReconcileHint"}}</small></span>
+      </label>
+    </div>
+    <div class="dup-actions">
+      <button type="button" data-action="saveSettings"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> {{localize "DUP.Button.SaveSettings"}}</button>
+      <button type="button" data-action="validate"><i class="fa-solid fa-shield-check" aria-hidden="true"></i> {{localize "DUP.Button.Validate"}}</button>
+      <button type="button" data-action="preview"><i class="fa-solid fa-list-check" aria-hidden="true"></i> {{localize "DUP.Button.Preview"}}</button>
+      <button type="button" class="dup-button--primary" data-action="apply" {{#unless settings.enabled}}disabled{{/unless}}><i class="fa-solid fa-users-gear" aria-hidden="true"></i> {{localize "DUP.Button.Apply"}}</button>
+    </div>
+  </fieldset>
+
+  <section class="dup-card" aria-labelledby="dup-plan-heading">
+    <div class="dup-section-heading">
+      <div>
+        <h2 id="dup-plan-heading">{{localize "DUP.Section.Plan"}}</h2>
+        <p>{{localize "DUP.Section.PlanHint"}}</p>
+      </div>
+      {{#if plan}}
+        <output class="dup-count">{{localize "DUP.Label.Changes"}}: {{actionableCount}}</output>
+      {{/if}}
+    </div>
+
+    <div class="dup-grid dup-grid--filters">
+      <label class="dup-field">
+        <span>{{localize "DUP.Fields.Search"}}</span>
+        <input type="search" name="filter" value="{{state.filter}}" autocomplete="off">
+      </label>
+      <label class="dup-field">
+        <span>{{localize "DUP.Fields.ActionFilter"}}</span>
+        <select name="actionFilter">
+          {{#each actionFilters}}
+            <option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+          {{/each}}
+        </select>
+      </label>
+    </div>
+
+    {{#if hasActions}}
+      <div class="dup-table-wrap" tabindex="0">
+        <table class="dup-table">
+          <caption class="dup-visually-hidden">{{localize "DUP.Table.PlanCaption"}}</caption>
+          <thead>
+            <tr>
+              <th scope="col">{{localize "DUP.Table.Action"}}</th>
+              <th scope="col">{{localize "DUP.Table.Key"}}</th>
+              <th scope="col">{{localize "DUP.Table.Current"}}</th>
+              <th scope="col">{{localize "DUP.Table.Desired"}}</th>
+              <th scope="col">{{localize "DUP.Table.Fields"}}</th>
+              <th scope="col">{{localize "DUP.Table.Reason"}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each actions}}
+              <tr data-dup-action-row data-action-kind="{{type}}" data-search="{{key}} {{name}} {{currentName}} {{type}}">
+                <td><span class="dup-badge dup-badge--{{type}}">{{label}}</span></td>
+                <td><code>{{key}}</code></td>
+                <td>{{current}}</td>
+                <td>{{desired}}</td>
+                <td>{{changes}}</td>
+                <td>{{reason}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    {{else}}
+      <div class="dup-empty">{{localize "DUP.Empty.NoPlan"}}</div>
+    {{/if}}
+    <div class="dup-empty" data-dup-filter-empty hidden>{{localize "DUP.Empty.NoMatches"}}</div>
+  </section>
+
+  <section class="dup-card" aria-labelledby="dup-issues-heading">
+    <div class="dup-section-heading">
+      <div>
+        <h2 id="dup-issues-heading">{{localize "DUP.Section.Issues"}}</h2>
+        <p>{{localize "DUP.Section.IssuesHint"}}</p>
+      </div>
+    </div>
+    {{#if hasIssues}}
+      <ul class="dup-issues" aria-live="polite">
+        {{#each issues}}
+          <li class="dup-issue dup-issue--{{severity}}">
+            <strong>{{severityLabel}}</strong>
+            <code>{{path}}</code>
+            <span>{{message}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <div class="dup-empty">{{localize "DUP.Empty.NoIssues"}}</div>
+    {{/if}}
+  </section>
+
+  {{#if report}}
+    <section class="dup-card" aria-labelledby="dup-report-heading">
+      <h2 id="dup-report-heading">{{localize "DUP.Section.Report"}}</h2>
+      <p>{{localize "DUP.Report.Completed"}}: {{report.completedAt}}</p>
+    </section>
+  {{/if}}
+
+  <footer class="dup-card dup-footer-actions">
+    <button type="button" data-action="exportSnapshot"><i class="fa-solid fa-file-export" aria-hidden="true"></i> {{localize "DUP.Button.ExportSnapshot"}}</button>
+    <button type="button" data-action="exportSchema"><i class="fa-solid fa-code" aria-hidden="true"></i> {{localize "DUP.Button.ExportSchema"}}</button>
+    <button type="button" data-action="resetGeometry"><i class="fa-solid fa-window-restore" aria-hidden="true"></i> {{localize "DUP.Button.ResetWindow"}}</button>
+  </footer>
+</section>
