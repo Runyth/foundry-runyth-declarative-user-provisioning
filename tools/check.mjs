@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-// Copyright (C) 2026 Runyth. See the LICENSE file for rights and obligations.
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { readFile, readdir, stat } from "node:fs/promises";
@@ -25,7 +25,7 @@ async function walk(directory) {
 
 const moduleManifest = JSON.parse(await readFile(resolve(root, "module.json"), "utf8"));
 assert.equal(moduleManifest.id, "runyth-declarative-user-provisioning");
-assert.equal(moduleManifest.version, "1.1.0");
+assert.equal(moduleManifest.version, "1.1.1");
 assert.equal(moduleManifest.compatibility.minimum, "13");
 assert.equal(moduleManifest.compatibility.maximum, "13");
 pass("module identity and Foundry compatibility");

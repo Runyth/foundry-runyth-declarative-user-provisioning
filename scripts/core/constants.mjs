@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-// Copyright (C) 2026 Runyth. See the LICENSE file for rights and obligations.
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 export const MODULE_ID = "runyth-declarative-user-provisioning";
 export const MODULE_TITLE = "Runyth Declarative User Provisioning";
-export const MODULE_VERSION = "1.0.2";
+export const MODULE_VERSION = "1.1.1";
 export const API_VERSION = "1.0.0";
 export const MANIFEST_SCHEMA_VERSION = 1;
 export const MANAGED_FLAG = "managed";

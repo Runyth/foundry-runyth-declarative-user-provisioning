@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-// Copyright (C) 2026 Runyth. See the LICENSE file for rights and obligations.
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const UNSUPPORTED_PATTERNS = [
   /(^|\s)[&*][A-Za-z0-9_-]+/,
   /(^|\s)!{1,2}[A-Za-z0-9_-]+/,

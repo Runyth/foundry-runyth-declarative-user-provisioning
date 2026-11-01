@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-// Copyright (C) 2026 Runyth. See the LICENSE file for rights and obligations.
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { LOG_LEVELS, MODULE_TITLE, SETTINGS, MODULE_ID } from "./constants.mjs";
 
 const PRIORITY = Object.freeze({ error: 0, warn: 1, info: 2, debug: 3 });
