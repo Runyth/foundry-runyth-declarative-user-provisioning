@@ -1,6 +1,6 @@
 # Runyth Declarative User Provisioning
 
-Declarative User Provisioning 1.0.0 reconciles known Foundry VTT v13 world users from a version-controlled JSON or YAML manifest. It is system-independent, GM-authoritative, idempotent, non-destructive, and disabled by default.
+Runyth Declarative User Provisioning 1.0.0 reconciles known Foundry VTT v13 world users from a version-controlled JSON or YAML manifest. It is system-independent, GM-authoritative, idempotent, non-destructive, and disabled by default.
 
 ## Safety model
 
@@ -15,9 +15,9 @@ Declarative User Provisioning 1.0.0 reconciles known Foundry VTT v13 world users
 
 ## Installation
 
-Extract `declarative-user-provisioning-v1.0.0.zip` into `FoundryVTT/Data/modules/`, restart Foundry, enable the module in a world, and open **Configure Settings → Module Settings → Declarative User Provisioning**. The dashboard is also available in the Settings sidebar and through `Ctrl+Alt+U`.
+Extract `runyth-declarative-user-provisioning-v1.0.0.zip` into `FoundryVTT/Data/modules/`, restart Foundry, enable the module in a world, and open **Configure Settings → Module Settings → Runyth Declarative User Provisioning**. The dashboard is also available in the Settings sidebar and through `Ctrl+Alt+U`.
 
-The install ZIP contains a non-versioned `declarative-user-provisioning/` root folder.
+The install ZIP contains a non-versioned `runyth-declarative-user-provisioning/` root folder.
 
 ## Quick start
 
@@ -57,7 +57,7 @@ The stable `key` is module-owned identity. Renaming a managed user does not chan
 ## Public API
 
 ```javascript
-const api = game.modules.get("declarative-user-provisioning")?.api;
+const api = game.modules.get("runyth-declarative-user-provisioning")?.api;
 await api.whenReady();
 await api.validateManifest();
 await api.plan();

@@ -44,7 +44,7 @@ test("runtime code exposes public API and supported User batch APIs", async () =
 });
 
 test("CSS selectors remain scoped to module-owned roots", async () => {
-  const css = await readFile(resolve(root, "styles/declarative-user-provisioning.css"), "utf8");
+  const css = await readFile(resolve(root, "styles/runyth-declarative-user-provisioning.css"), "utf8");
   for (const line of css.split("\n")) {
     const trimmed = line.trim();
     if (!trimmed.endsWith("{") || trimmed.startsWith("@")) continue;

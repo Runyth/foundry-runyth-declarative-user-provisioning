@@ -7,7 +7,7 @@ import { createDeterministicZip } from "./lib/deterministic-zip.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const dist = resolve(root, "dist");
-const moduleId = "declarative-user-provisioning";
+const moduleId = "runyth-declarative-user-provisioning";
 const version = JSON.parse(await readFile(resolve(root, "module.json"), "utf8")).version;
 const runtimeRoots = ["lang/", "manifests/", "schema/", "scripts/", "styles/", "templates/"];
 const runtimeFiles = new Set(["module.json", "README.md", "CHANGELOG.md", "LICENSE"]);

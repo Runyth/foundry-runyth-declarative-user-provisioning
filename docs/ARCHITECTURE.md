@@ -18,7 +18,7 @@ The planner is pure and accepts a normalized manifest, a user snapshot, a digest
 
 ## Identity and ownership
 
-A manifest entry's stable `key` is stored at `flags.declarative-user-provisioning.managed`. The flag contains schema version, manifest digest, desired role, and enabled state. Names are mutable display data and are not implicit identity.
+A manifest entry's stable `key` is stored at `flags.runyth-declarative-user-provisioning.managed`. The flag contains schema version, manifest digest, desired role, and enabled state. Names are mutable display data and are not implicit identity.
 
 An unmanaged existing user can enter module ownership only through an explicit exact `match`. Name collisions without a match fail closed.
 

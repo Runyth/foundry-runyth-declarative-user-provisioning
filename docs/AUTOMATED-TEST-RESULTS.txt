@@ -1,8 +1,8 @@
-Declarative User Provisioning 1.0.0 — Automated Test Results
+Runyth Declarative User Provisioning 1.0.0 — Automated Test Results
 Generated: 2026-08-04
 
 
-> declarative-user-provisioning@1.0.0 test
+> runyth-declarative-user-provisioning@1.0.0 test
 > node --test tests/*.test.mjs
 
 TAP version 13

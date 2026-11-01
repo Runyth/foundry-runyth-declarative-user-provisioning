@@ -32,8 +32,8 @@ jobs:
         uses: softprops/action-gh-release@e598afbe1493e6b1bafb1f389cabb956eab91231
         with:
           files: |
-            dist/declarative-user-provisioning-v*-mod.zip
-            dist/declarative-user-provisioning-v*-src.zip
-            dist/declarative-user-provisioning-v*-doc.zip
-            dist/declarative-user-provisioning-v*-SHA256SUMS.txt
+            dist/runyth-declarative-user-provisioning-v*-mod.zip
+            dist/runyth-declarative-user-provisioning-v*-src.zip
+            dist/runyth-declarative-user-provisioning-v*-doc.zip
+            dist/runyth-declarative-user-provisioning-v*-SHA256SUMS.txt
             module.json

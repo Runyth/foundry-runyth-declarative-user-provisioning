@@ -15,7 +15,7 @@ import {
 import { buildReconciliationPlan } from "../scripts/core/planner.mjs";
 import { FALLBACK_ROLE_MAP } from "../scripts/core/roles.mjs";
 
-const HELP = `Declarative User Provisioning manifest CLI 1.0.0
+const HELP = `Runyth Declarative User Provisioning manifest CLI 1.0.0
 
 Usage:
   node tools/user-manifest.mjs init <output.{yaml|json}> [--force]

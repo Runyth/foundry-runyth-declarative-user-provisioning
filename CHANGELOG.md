@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0 — 2026-11-01
+
+### Changed
+
+- Adopted the Runyth brand across the whole published identity: the Foundry module id is now `runyth-declarative-user-provisioning`, the stylesheet ships as `styles/runyth-declarative-user-provisioning.css`, and all internal identifiers, settings namespaces, tooling, and documentation references the new id.
+- Released the install, source, and documentation archives under the new id as `runyth-declarative-user-provisioning-v<version>-mod.zip`, `-src.zip`, and `-doc.zip`.
+- Installation folders for existing worlds must be renamed to `runyth-declarative-user-provisioning/`.
+
 ## 1.0.3 — 2026-11-01
 
 ### Fixed

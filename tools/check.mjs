@@ -24,8 +24,8 @@ async function walk(directory) {
 }
 
 const moduleManifest = JSON.parse(await readFile(resolve(root, "module.json"), "utf8"));
-assert.equal(moduleManifest.id, "declarative-user-provisioning");
-assert.equal(moduleManifest.version, "1.0.3");
+assert.equal(moduleManifest.id, "runyth-declarative-user-provisioning");
+assert.equal(moduleManifest.version, "1.1.0");
 assert.equal(moduleManifest.compatibility.minimum, "13");
 assert.equal(moduleManifest.compatibility.maximum, "13");
 pass("module identity and Foundry compatibility");
@@ -58,7 +58,7 @@ const template = await readFile(resolve(root, "templates/dashboard.hbs"), "utf8"
 for (const match of template.matchAll(/localize\s+"(DUP\.[^"]+)"/g)) assert.ok(en[match[1]], `Missing localization key ${match[1]}`);
 pass("template localization references");
 
-const css = await readFile(resolve(root, "styles/declarative-user-provisioning.css"), "utf8");
+const css = await readFile(resolve(root, "styles/runyth-declarative-user-provisioning.css"), "utf8");
 assert.equal(/(^|\n)\s*(?:button|input|select|label|\.window-content|:root)\s*[{,]/.test(css), false);
 pass("CSS isolation");
 

@@ -3,7 +3,7 @@
 Access:
 
 ```javascript
-const api = game.modules.get("declarative-user-provisioning")?.api;
+const api = game.modules.get("runyth-declarative-user-provisioning")?.api;
 await api.whenReady();
 ```
 
@@ -25,7 +25,7 @@ All user-data reads and changes are GM-restricted at API level. Callers should i
 Ready hook:
 
 ```javascript
-Hooks.once("declarative-user-provisioning.ready", (api) => {
+Hooks.once("runyth-declarative-user-provisioning.ready", (api) => {
   console.log(api.status());
 });
 ```

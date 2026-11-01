@@ -4,8 +4,8 @@ Build date: 2026-08-04
 
 ## Release identity
 
-- Display name: Declarative User Provisioning
-- Module ID: `declarative-user-provisioning`
+- Display name: Runyth Declarative User Provisioning
+- Module ID: `runyth-declarative-user-provisioning`
 - Version: 1.0.0
 - Public API: 1.0.0
 - Manifest schema: 1

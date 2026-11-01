@@ -108,7 +108,7 @@ export class DeclarativeUserProvisioningApi {
   exportSchema({ download = false } = {}) {
     const schema = exportManifestSchema();
     const text = `${JSON.stringify(schema, null, 2)}\n`;
-    if (download) foundry.utils.saveDataToFile(text, "application/schema+json", "declarative-user-provisioning.schema.json");
+    if (download) foundry.utils.saveDataToFile(text, "application/schema+json", "runyth-declarative-user-provisioning.schema.json");
     return schema;
   }
 
