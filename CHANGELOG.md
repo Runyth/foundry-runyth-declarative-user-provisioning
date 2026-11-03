@@ -1,14 +1,10 @@
 # Changelog
 
-## 1.1.1 - 2026-11-01
-
-### Fixed
+## 1.1.1 — 2026-11-01
 
 - Attributed the source licence headers to the same holder the README Licence chapter names so every module surface carries the same copyright holder.
 
 ## 1.1.0 — 2026-11-01
-
-### Changed
 
 - Adopted the Runyth brand across the whole published identity: the Foundry module id is now `runyth-declarative-user-provisioning`, the stylesheet ships as `styles/runyth-declarative-user-provisioning.css`, and all internal identifiers, settings namespaces, tooling, and documentation references the new id.
 - Released the install, source, and documentation archives under the new id as `runyth-declarative-user-provisioning-v<version>-mod.zip`, `-src.zip`, and `-doc.zip`.
@@ -16,26 +12,18 @@
 
 ## 1.0.3 — 2026-11-01
 
-### Fixed
-
 - Pointed the manifest `download` URL at the release's own `-mod` archive instead of the previous version's release path.
 
 ## 1.0.2 — 2026-10-31
-
-### Fixed
 
 - Replaced the placeholder schema identifier with the public repository URL.
 
 ## 1.0.1 — 2026-10-31
 
-### Changed
-
 - Licensed the program under AGPL-3.0-or-later.
 - Published install, source, and documentation archives as `-mod`, `-src`, and `-doc`.
 
 ## 1.0.0 — 2026-08-04
-
-### Added
 
 - Declarative JSON and strict safe-subset YAML user manifests.
 - Stable managed-user keys stored in module flags.
